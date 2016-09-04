@@ -11,9 +11,9 @@
   function LeftSideMenuController($mdSidenav, $log) {
     var vm = this;
     vm.title = 'LeftSideMenuController';
+    vm.close = close;
 
-    vm.close = function () {
-      // Component lookup should always be available since we are not using `ng-if`
+    function close() {
       $mdSidenav('left').close()
         .then(function () {
           $log.debug("close LEFT is done");

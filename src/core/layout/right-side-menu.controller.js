@@ -10,11 +10,12 @@
   /* @ngInject */
   function RightSideMenuController($mdSidenav, $log, $localStorage) {
     var vm = this;
-    vm.title = 'RightSideMenuController';
+
     vm.$storage = $localStorage;
-    console.log(vm.$storage.sidebarThemeClass);
-    vm.close = function () {
-      // Component lookup should always be available since we are not using `ng-if`
+    vm.title = 'RightSideMenuController';
+    vm.close = close;
+
+    function close() {
       $mdSidenav('right').close()
         .then(function () {
           $log.debug("close RIGHT is done");

@@ -18,12 +18,6 @@
       return $mdSidenav('right').isOpen();
     };
 
-    vm.changeColor = function(){
-      console.log("Changing colors");
-      vm.$storage.navbarColor = '#124332';
-      vm.$storage.sidebarColor = '#aa4332';
-    }
-
     /**
      * Supplies a function that will continue to operate until the
      * time is up.
