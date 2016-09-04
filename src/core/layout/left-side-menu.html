@@ -1,0 +1,15 @@
+<div ng-controller="LeftSideMenuController as vm">
+  <md-sidenav class="md-sidenav-left md-whiteframe-4dp"
+              md-component-id="left"
+              md-is-locked-open="$mdMedia('gt-md')">
+    <md-content layout-padding flex >
+      <md-button ng-click="vm.close()" class="md-primary" hide-gt-md>
+        Close Sidenav Left
+      </md-button>
+      <p hide show-gt-md>
+        This sidenav is locked open on your device. To go back to the default behavior,
+        narrow your display.
+      </p>
+    </md-content>
+  </md-sidenav>
+</div>

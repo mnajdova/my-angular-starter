@@ -1,0 +1,22 @@
+<div ng-controller="RightSideMenuController as vm">
+  <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" >
+    <md-toolbar ng-style="{'background-color': vm.$storage.sidebarColor }">
+      <div class="md-toolbar-tools">
+        <h4>Side navigation</h4>
+        <span flex></span>
+        <md-button class="md-icon-button">
+          <img src="images/right-arrow.png" style="width:24px;height:24px;" ng-click="vm.close()"/>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-content layout-padding>
+      <form>
+        <md-input-container>
+          <label for="testInput">Test input</label>
+          <input type="text" id="testInput"
+                 ng-model="vm.data" md-autofocus>
+        </md-input-container>
+      </form>
+    </md-content>
+  </md-sidenav>
+</div>
