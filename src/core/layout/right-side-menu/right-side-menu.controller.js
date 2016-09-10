@@ -16,10 +16,7 @@
     vm.close = close;
 
     function close() {
-      $mdSidenav('right').close()
-        .then(function () {
-          $log.debug("close RIGHT is done");
-        });
+      $mdSidenav('right').close();
     };
   }
 

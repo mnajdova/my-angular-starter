@@ -14,7 +14,8 @@ var CSS_APP = [
 ];
 
 var JS_APP = [
-  'src/**/*.js'
+  'src/**/*.js',
+  '!src/**/*.test.js'
 ];
 
 var VIEWS_APP = [
@@ -150,17 +151,6 @@ gulp.task('watch', function () {
 gulp.task('serve', function () {
   connect.server({
     port: 8000
-    //middleware: function (connect, opt) {
-    //  return [
-    //    (function () {
-    //      var url = require('url');
-    //      var proxy = require('proxy-middleware');
-    //      var options = url.parse(API_URL);
-    //      options.route = API_ROUTE;
-    //      return [proxy(options)];
-    //    })()
-    //  ];
-    //}
   });
 });
 

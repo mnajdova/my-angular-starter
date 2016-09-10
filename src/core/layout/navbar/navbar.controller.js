@@ -40,26 +40,16 @@
      * report completion in console
      */
     function buildDelayedToggler(navID) {
-      console.log("Bla " + navID);
       return debounce(function () {
         // Component lookup should always be available since we are not using `ng-if`
-        $mdSidenav(navID)
-          .toggle()
-          .then(function () {
-            $log.debug("toggle " + navID + " is done");
-          });
+        $mdSidenav(navID).toggle();
       }, 200);
     }
 
     function buildToggler(navID) {
-
       return function () {
         // Component lookup should always be available since we are not using `ng-if`
-        $mdSidenav(navID)
-          .toggle()
-          .then(function () {
-            $log.debug("toggle " + navID + " is done");
-          });
+        $mdSidenav(navID).toggle();
       }
     }
   }

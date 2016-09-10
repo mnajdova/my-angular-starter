@@ -14,7 +14,7 @@
 
     $stateProvider.state("MyAngularJSStarter", {
       url: '/my',
-      templateUrl: 'src/core/layout/main.html',
+      templateUrl: 'src/core/layout/main/main.html',
       controller: "MainController",
       controllerAs: 'vm'
     });
